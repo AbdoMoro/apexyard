@@ -8,6 +8,14 @@
 # block-onboarding-in-git.sh backstops this gitignore at commit time.
 onboarding.yaml
 
+# v2 split-portfolio: the public framework fork stays slim. The registry,
+# per-project docs, and onboarding.yaml live in the PRIVATE sibling repo
+# (../apexyard-portfolio/). Keep them out of this fork even on a stray
+# `git add -A` (which is also blocked by block-git-add-all.sh). See
+# docs/multi-project.md § "Split-portfolio mode".
+apexyard.projects.yaml
+/projects
+
 # ApexYard per-project config written by /onboard. Contains deploy URLs and
 # sensitive-topic notes that should not leak to git — keep it local.
 .claude/project-config.json
